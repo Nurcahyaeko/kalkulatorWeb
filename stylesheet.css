@@ -17,7 +17,7 @@
     box-sizing: border-box;
 }
 
-.calculator-keys{
+.calculator-keys {
     width: 100%;
 }
 
@@ -25,7 +25,7 @@
     display: flex;
 }
 
-button{
+button {
     height: 80px;
     background-color: gray;
     border: 1px solid black;
@@ -35,11 +35,13 @@ button{
     outline: none;
 }
 
-.all-clear, .zero-btn{
+.all-clear,
+.zero-btn {
     width: 50%;
 }
 
-.operator, .equal-sign{
+.operator,
+.equal-sign {
     background-color: orange;
 }
 
@@ -47,6 +49,7 @@ button:hover {
     background-color: darkgray;
 }
 
-.operator:hover, .equal-sign:hover{
+.operator:hover,
+.equal-sign:hover {
     background-color: darkorange;
 }

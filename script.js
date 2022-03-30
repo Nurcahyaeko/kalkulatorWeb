@@ -80,13 +80,14 @@ const calculate = () => {
             break
         case "/":
             result = parseInt(prevNumber) / parseInt(currentNumber)
-            break        
+            break
         default:
             return
     }
     currentNumber = result
     calculationOperator = ''
 }
+
 
 ///belum jalan button allclear, karena gk muncul tulisan adaada
 const clearBtn = document.querySelector('.all-clear')
