@@ -53,9 +53,11 @@ operators.forEach((operator) => {
 })
 
 const inputOperator = (operator) => {
-    prevNumber = currentNumber
+    if(calculationOperator === ''){
+        prevNumber = currentNumber
+    }    
     calculationOperator = operator
-    currentNumber = ''
+    currentNumber = '0'
 }
 
 const equalSign = document.querySelector('.equal-sign')
@@ -70,16 +72,16 @@ const calculate = () => {
     let result = ''
     switch (calculationOperator) {
         case "+":
-            result = parseInt(prevNumber) + parseInt(currentNumber)
+            result = parseFloat(prevNumber) + parseFloat(currentNumber)
             break
         case "-":
-            result = parseInt(prevNumber) - parseInt(currentNumber)
+            result = parseFloat(prevNumber) - parseFloat(currentNumber)
             break
         case "*":
-            result = parseInt(prevNumber) * parseInt(currentNumber)
+            result = parseFloat(prevNumber) * parseFloat(currentNumber)
             break
         case "/":
-            result = parseInt(prevNumber) / parseInt(currentNumber)
+            result = parseFloat(prevNumber) / parseFloat(currentNumber)
             break
         default:
             return
@@ -92,5 +94,29 @@ const calculate = () => {
 ///belum jalan button allclear, karena gk muncul tulisan adaada
 const clearBtn = document.querySelector('.all-clear')
 clearBtn.addEventListener('click', () => {
-    console.log('adaada')
+    // console.log('adaada')
+    clearAll()
+    updateScreen(currentNumber)
 })
+
+const clearAll = () => {
+    prevNumber = ''
+    calculationOperator = ''
+    currentNumber = ''
+}
+
+const decimal = document.querySelector('.decimal')
+
+decimal.addEventListener('click', (event) =>{
+    // console.log(event.target.value)
+    inputDecimal(event.target.value)
+    updateScreen(currentNumber)
+})
+
+inputDecimal = (dot) =>{
+    if(currentNumber.includes('.')){
+        return
+    }
+    currentNumber += dot
+}
+
