@@ -1,8 +1,34 @@
-.calculator {
+/* body{
+    background: url(/asset/bg.jpg);
+} */
+/* <div style="background-image:url('[image url]');"> */
+body {
+    background: url(asset/bg2.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapped {
     text-align: center;
     margin: 0 auto;
-    padding-top: 200px;
+    padding-top: 60px;
+    padding-bottom: 20px;
     width: 400px;
+}
+
+.calculator {
+    opacity: 0.9;
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+    background: url(asset/bgcal1.jpg);
+    /* height: 100%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 7px 7px 10px;
 }
 
 .calculator-screen {
@@ -15,14 +41,20 @@
     border: none;
     padding: 0 20px;
     box-sizing: border-box;
+    margin-bottom: 10px;
 }
 
 .calculator-keys {
     width: 100%;
+
 }
 
 .row {
     display: flex;
+}
+
+input {
+    border-radius: 10px;
 }
 
 button {
@@ -33,11 +65,14 @@ button {
     color: #fff;
     width: 25%;
     outline: none;
+    border-radius: 10px;
+    margin: 3px;
+    opacity: 0.9;
 }
 
 .all-clear,
 .zero-btn {
-    width: 50%;
+    width: 53%;
 }
 
 .operator,
