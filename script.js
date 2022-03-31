@@ -1,13 +1,3 @@
-// const numbers = document.querySelectorAll(".number")
-// // console.log(numbers);
-
-// numbers.forEach((number) =>{
-//     number.addEventListener("click", (event) =>{
-//         // console.log("number is pressed")
-//         console.log(event.target.value)
-//     })    
-// })
-
 const calculatorScreen = document.querySelector('.calculator-screen')
 
 const updateScreen = (number) => {
@@ -16,12 +6,6 @@ const updateScreen = (number) => {
 
 const numbers = document.querySelectorAll(".number")
 
-
-// numbers.forEach((number) =>{
-//     number.addEventListener("click", (event) =>{  
-//         updateScreen(event.target.value)
-//     })    
-// })
 
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
@@ -53,9 +37,9 @@ operators.forEach((operator) => {
 })
 
 const inputOperator = (operator) => {
-    if(calculationOperator === ''){
+    if (calculationOperator === '') {
         prevNumber = currentNumber
-    }    
+    }
     calculationOperator = operator
     currentNumber = '0'
 }
@@ -83,6 +67,9 @@ const calculate = () => {
         case "/":
             result = parseFloat(prevNumber) / parseFloat(currentNumber)
             break
+        case "%":
+            result = parseFloat(prevNumber) % parseFloat(currentNumber)
+            break
         default:
             return
     }
@@ -91,7 +78,6 @@ const calculate = () => {
 }
 
 
-///belum jalan button allclear, karena gk muncul tulisan adaada
 const clearBtn = document.querySelector('.all-clear')
 clearBtn.addEventListener('click', () => {
     // console.log('adaada')
@@ -107,16 +93,15 @@ const clearAll = () => {
 
 const decimal = document.querySelector('.decimal')
 
-decimal.addEventListener('click', (event) =>{
+decimal.addEventListener('click', (event) => {
     // console.log(event.target.value)
     inputDecimal(event.target.value)
     updateScreen(currentNumber)
 })
 
-inputDecimal = (dot) =>{
-    if(currentNumber.includes('.')){
+inputDecimal = (dot) => {
+    if (currentNumber.includes('.')) {
         return
     }
     currentNumber += dot
 }
-
