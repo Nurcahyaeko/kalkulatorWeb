@@ -1,12 +1,8 @@
-/* body{
-    background: url(/asset/bg.jpg);
-} */
-/* <div style="background-image:url('[image url]');"> */
 body {
     background: url(asset/bg2.jpg);
     height: 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: cover;
 }
 
@@ -18,17 +14,17 @@ body {
     width: 400px;
 }
 
-.calculator {
-    opacity: 0.9;
+.calculator {    
     background-color: black;
     padding: 20px;
     border-radius: 20px;
-    background: url(asset/bgcal1.jpg);
+    background: url(asset/bgCal2.jpg);
     /* height: 100%; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 7px 7px 10px;
+    box-shadow: 7px 7px 7px;
+    
 }
 
 .calculator-screen {
@@ -68,6 +64,13 @@ button {
     border-radius: 10px;
     margin: 3px;
     opacity: 0.9;
+    /* background: url(asset/bg.jpg); */
+    /* height: 100%; */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+
 }
 
 .all-clear,
